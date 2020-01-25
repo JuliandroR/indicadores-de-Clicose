@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Medidor de Glicose</title>
+  </head>
+  <body>
+    <div class="destaque">
+      <h2>Última Medição</h2>
+      <h3 id="ultimo_valor_lancado">000</h3>
+    </div>
+    <h2>Medições Anteriores</h2>
+    <div id="medicoes_anteriores">
+      <div class="medicao">
+        <h3 class="data">00/00/0000</h3>
+        <h2 class="valor">000</h2>
+      </div>
+    </div>
+    <footer>
+      <button id="nova_medicao">+</button>
+    </footer>
+  </body>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>
