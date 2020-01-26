@@ -106,3 +106,39 @@ footer button{
     font-family: sans-serif;
     font-weight: bold;
 }
+
+input{
+    width: 90vw;
+    height: 7.5vh;
+    margin: 0 0 5vh 5vw;
+    background-color: rgba(136, 139, 141, 0.7);
+    border-radius: 2.5vw;
+    border: none;
+    box-sizing: border-box;
+    padding: 1vh;
+    text-align: center;
+    font-size: 2.25vh;
+    line-height: 7.5vh;
+    color: rgb(241, 241, 241);
+    font-weight: bold;
+
+}
+
+p{
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2vh;
+    font-size: 2.5vh;
+}
+
+button{
+    width: 50vw;
+    height: 7vh;
+    margin: 2vh 25vw;
+    background-color: #888B8D;
+    color: rgb(241, 241, 241);
+    border: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
