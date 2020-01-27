@@ -6,7 +6,10 @@ if (localStorage.createDatabase != "true") {
     medicoes: []
   }).write();
   localStorage.createDatabase = "true";
+  localStorage.name = window.prompt("Para Começar, qual o seu nome?");
 }
+
+document.getElementById("name").innerHTML = `Olá, ${localStorage.name}`;
 
 document.getElementById("nova_medicao").addEventListener("click", () => {
   window.location.assign("pages/nova_medicao.html");
@@ -14,6 +17,8 @@ document.getElementById("nova_medicao").addEventListener("click", () => {
 
 const listarMedicoes = () => {
   let data = db.get("medicoes").value();
+  document.getElementById("ultimo_valor_lancado").innerHTML =
+    data[data.length - 1].valorMedido;
 
   data.forEach(item => {
     document
@@ -40,3 +45,13 @@ const criaElemento = (dataMedicao, valorMedido) => {
 };
 
 listarMedicoes();
+
+const relogio = () => {
+  d = new Date();
+  document.getElementById("hora").innerHTML =
+    `${d.getHours()}`.padStart(2, 0) +
+    ":" +
+    `${d.getMinutes()}`.padStart(2, 0);
+};
+
+window.setInterval(relogio, 1000)
